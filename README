@@ -1,6 +1,6 @@
 
-##🧠 RAG-based IT Support Troubleshooting Assistant
-📌 Problem Statement
+# 🧠 RAG-based IT Support Troubleshooting Assistant
+## 📌 Problem Statement
 
 IT support teams frequently deal with repetitive troubleshooting queries related to VPNs, networks, firewalls, and servers. While documentation exists, it is:
 
@@ -22,7 +22,7 @@ Handles ambiguous or underspecified user queries
 
 This project focuses on engineering the RAG framework and retrieval logic, rather than full UI or production deployment.
 
-##🛠️ Solution Overview
+## 🛠️ Solution Overview
 
 This project implements a category-aware RAG pipeline using LangChain and ChromaDB, designed specifically for IT troubleshooting scenarios.
 
@@ -43,7 +43,7 @@ LLM-based Answer Generation
 
 The system is currently implemented and demonstrated inside a Jupyter Notebook to allow fast iteration, debugging, and experimentation with retrieval strategies.
 
-##🧩 Key Engineering Decisions
+## 🧩 Key Engineering Decisions
 1️⃣ Category-Based Retrieval
 
 Instead of storing all documents in a single vector store, documentation is grouped by domain:
@@ -60,7 +60,7 @@ General IT
 
 Each category has its own ChromaDB collection, reducing retrieval noise and improving relevance.
 
-##2️⃣ RAG Fusion (Multi-Query Expansion)
+## 2️⃣ RAG Fusion (Multi-Query Expansion)
 
 To improve recall, a single user question is expanded into multiple semantically related queries using an LLM.
 
@@ -80,7 +80,7 @@ Configuration mismatches
 
 Each expanded query retrieves documents independently, increasing coverage and robustness.
 
-##3️⃣ Semantic Vector Retrieval with ChromaDB
+## 3️⃣ Semantic Vector Retrieval with ChromaDB
 
 Documents are chunked and embedded using OpenAI embeddings
 
@@ -90,7 +90,7 @@ Retrieved chunks are flattened and merged into a single context window
 
 This ensures the LLM answer is grounded in actual documentation, not guesswork.
 
-##4️⃣ Explicit Context Construction
+## 4️⃣ Explicit Context Construction
 
 Rather than relying on opaque chains, the project:
 
@@ -102,7 +102,7 @@ Makes it easy to inspect why a specific answer was generated
 
 This design choice improves debuggability and transparency, which is critical for RAG systems.
 
-##📒 Current Implementation
+## 📒 Current Implementation
 
 Implemented as a Jupyter Notebook for clarity and experimentation
 
@@ -120,7 +120,7 @@ Context-aware answer generation
 
 The notebook format allows recruiters and reviewers to see each step of the RAG pipeline clearly, including intermediate outputs.
 
-##⚠️ Current Limitations
+## ⚠️ Current Limitations
 
 This project is intentionally scoped for learning and demonstration:
 
@@ -134,7 +134,7 @@ No automated web crawler for enterprise documentation
 
 These tradeoffs were made to prioritize RAG correctness and retrieval quality over surface-level completeness.
 
-##🚀 Future Improvements
+## 🚀 Future Improvements
 
 Planned extensions include:
 
@@ -148,7 +148,7 @@ Expanding the document corpus
 
 Building a simple chat interface for live interaction
 
-##🧠 Why This Project Matters
+## 🧠 Why This Project Matters
 
 This project demonstrates:
 
@@ -162,7 +162,7 @@ Engineering judgment in scoping and tradeoffs
 
 It is designed as a foundation for a production-grade IT support assistant.
 
-##🧰 Tech Stack
+## 🧰 Tech Stack
 
 Python
 
